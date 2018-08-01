@@ -1,6 +1,13 @@
 <template>
-  <div class="hello">
-    <div style="line-height: 145px;">功能暂未开放！</div>
+  <div class="brand" id="brand">
+      <img src="../assets/brand1.png" alt>
+      <img src="../assets/brand2.png" alt>
+      <img src="../assets/brand3.png" alt>
+      <img src="../assets/brand4.png" alt>
+      <img src="../assets/brand5.png" alt>
+      <img src="../assets/brand6.png" alt>
+      <img src="../assets/brand7.png" alt>
+      <img src="../assets/brand8.png" alt>
   </div>
 </template>
 
@@ -11,15 +18,10 @@ export default {
   name: 'service',
   data () {
     return {
-      myTitle: ''
     }
   },
-  // components: {
-  //   top: top,
-  //   bottom: bottom
-  // },
   asyncData ({ store }) {
-    // return store.dispatch('getMusic')
+    return store.dispatch('hotLabsInit')
   },
   metaInfo() {
     const title = '环球加盟'
@@ -35,7 +37,10 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
-.hello{
-  min-height:476px;
+#brand{
+  width:1200px;
+  margin: 20px auto;
+  height:auto;
+  overflow: hidden;
 }
 </style>

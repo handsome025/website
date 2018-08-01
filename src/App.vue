@@ -71,10 +71,7 @@ export default {
   -webkit-user-select: text
 }
 .app-wrap{
-  width:1200px;
-  margin: 20px auto;
-  height:auto;
-  overflow: hidden;
+  position:relative;
 }
 #app-right{
   width: 312px;

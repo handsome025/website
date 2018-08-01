@@ -87,7 +87,14 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
+
   .app-right{
     margin-top: 20px;
+  }
+  .information{
+    width:1200px;
+    margin: 20px auto;
+    height:auto;
+    overflow: hidden;
   }
 </style>

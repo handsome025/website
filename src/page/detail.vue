@@ -83,4 +83,10 @@ export default {
   .app-right{
     margin-top: 20px;
   }
+.information{
+  width:1200px;
+  margin: 20px auto;
+  height:auto;
+  overflow: hidden;
+}
 </style>

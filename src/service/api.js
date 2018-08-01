@@ -47,3 +47,7 @@ export const consultationDetail = param => req.get('/consultation/pc/detail?id='
  * 资讯检索
  */
 export const consultationSearch = param => req.get('/consultation/pc/search?size=20&page='+param.pageNum+'&content='+param.content)
+/**
+ * 提交手机号
+ */
+export const addConnection = param => req.get('/bizEx/pc/addConnection?bizExId='+param.bizExId+'&phone='+param.phone)

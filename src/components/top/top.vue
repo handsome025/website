@@ -30,7 +30,7 @@
         menus: [
           { path: '/', name: '首页'},
           { path: '/information', name: '资讯'},
-          { path: '/service', name: '创业者服务'},
+          { path: '/brand', name: '品牌入驻'},
           { path: '/contact', name: '联系我们'}
         ],
         keys: ''

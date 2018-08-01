@@ -114,6 +114,10 @@ export function createStore () {
         commit('setHotProject',setHotProject)
         commit('setConsultationIndex',consultation)
         commit('setHotLabs',hotLabs)
+      },
+      async hotLabsInit({dispatch, commit}, data) {
+        let hotLabs = await api.hotLabs()
+        commit('setHotLabs',hotLabs)
       }
     },
 

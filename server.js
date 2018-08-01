@@ -196,6 +196,11 @@ app.get('/consultation/pc/search', (req, res) => {
   // console.log(5555,req.query.id)
   axiosEvent('/consultation/pc/search?id='+req.query.id, req.query.id, res)
 })
+// 提交手机号
+app.get('/bizEx/pc/addConnection', (req, res) => {
+  // console.log(5555,req.query.id)
+  axiosEvent('/bizEx/pc/addConnection?bizExId='+req.query.bizExId+'&phone='+req.query.phone, req, res)
+})
 
 
 app.get('*', isProd ? render : (req, res) => {

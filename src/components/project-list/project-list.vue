@@ -33,7 +33,7 @@
         <div v-for="(item, index) in projectList" class="list-detail" :id="item.id" @click="bizExDetail(item.id)">
           <div class="detail-left">
             <img :src="item.head" :alt="item.yjh" :title="item.name">
-            <div class="item":class="item.hangYe.length > 2? '_item':''"><p>{{item.hangYe}}</p></div>
+            <div class="item" v-if="item.hangYe" :class="item.hangYe.length > 2? '_item':''"><p>{{item.hangYe}}</p></div>
           </div>
           <div class="detail-right">
             <div class="right-title">{{item.name}}<div class="address">总部{{item.zongBu}}</div></div>

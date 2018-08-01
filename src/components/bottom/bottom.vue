@@ -9,10 +9,8 @@
         <div class="top-center">
           <h2>联系我们</h2>
           <ul>
-            <li>电话：</li>
-            <li>项目合作：</li>
-            <li>商务合作：</li>
-            <li>媒体合作：</li>
+            <li>电话：+021-86157065</li>
+            <li>项目合作：+86 181-0677-5771</li>
           </ul>
         </div>
         <div class="top-right">
