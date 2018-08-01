@@ -14,7 +14,6 @@
     <router-link to="/detail">tiaozhua</router-link> -->
   </div>
 </template>
-
 <script>
 import * as api from '../service/api'
 import news from '../components/news/news.vue'
