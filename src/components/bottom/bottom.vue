@@ -27,7 +27,7 @@
         </div>
         <div class="bottom-service">
           <div class="service">本站由&nbsp;&nbsp;<span>阿里云&nbsp;&nbsp;提供计算与安全服务</span></div>
-          <div class="record">©2018~2020  上海炬啸网络科技有限公司 | 沪IPC号213123124455 | 沪IPC备号213123124455 | 沪公网安备号222333311113</div>
+          <div class="record">©2018~2020  上海炬啸网络科技有限公司 | <a href="http://www.miitbeian.gov.cn" style="color: #636464;">沪ICP备17019887号-2</a></div>
         </div>
       </div>
     </div>

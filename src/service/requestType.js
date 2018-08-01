@@ -30,7 +30,7 @@ if (process.env.NODE_ENV == 'development') {
     console.log("development")
 }else if (process.env.NODE_ENV == 'production') {
     console.log("production")
-    baseURL = 'http://101.132.90.6:99';
+    baseURL = 'http://izhaoshang.com';
 }
 
 axios.defaults.timeout = 10000

@@ -185,7 +185,8 @@ export default {
         font-size:16px;
         color:#fff;
         height:64px;
-        background:rgba(0,0,0,0.6);
+        background-color :rgba(0, 0, 0, 0.6);
+        filter: alpha(opacity=60);
         p{
           width:190px;
           margin: 10px auto;
