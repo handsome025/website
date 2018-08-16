@@ -210,7 +210,7 @@ app.get('*', isProd ? render : (req, res) => {
 //deal router
 // app.use('/', require('./router.js')());
 
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 99
 app.listen(port, () => {
   console.log(`server started at localhost:${port}`)
 })

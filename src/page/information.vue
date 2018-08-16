@@ -34,11 +34,11 @@ export default {
     return store.dispatch('getConsultationList',{isFirst:true,pageNum: 1})
   },
   metaInfo() {
-    const title = "环球加盟"
+    const title = "加盟资讯，提供各类行业招商品牌资讯信息"
     return {
       title,
-      meta: [{ vmid: 'description', name: 'description', content: title },
-            { vmid: 'keywords', name: 'keywords', content: title }]
+      meta: [{ vmid: 'description', name: 'description', content: "环球加盟为广大投资及创业者提供餐饮，生活服务，酒水饮料，母婴儿童，教育等行业的真实可靠的行业资讯，提供最具前沿的火爆招商项目，让一部分人先看到未来。" },
+            { vmid: 'keywords', name: 'keywords', content: "招商资讯，项目资讯，创业项目资讯" }]
       }
   },
   computed: {

@@ -23,10 +23,10 @@ axios.interceptors.response.use(response => {
     return Promise.resolve(error.response)
 })
 
-let baseURL = 'http://localhost:8080'
+let baseURL = 'http://localhost:99'
 
 if (process.env.NODE_ENV == 'development') {
-    baseURL = 'http://localhost:8080';
+    baseURL = 'http://localhost:99';
     console.log("development")
 }else if (process.env.NODE_ENV == 'production') {
     console.log("production")

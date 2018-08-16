@@ -14,13 +14,7 @@
 <script>
 import top from './components/top/top.vue'
 import bottom from './components/bottom/bottom.vue'
-// import miniProgram from './components/mini-program/mini-program.vue'
-// import news from './components/news/news.vue'
-// import hotProject from './components/hot-project/hot-project.vue'
-// import projectList from './components/project-list/project-list.vue'
-// import inforList from './components/infor-list/infor-list.vue'
-// import articleinfo from './components/article-info/article-info.vue'
-// import introduction from './components/introduction/introduction.vue'
+
 export default {
   name: 'app',
   components: {
@@ -32,6 +26,12 @@ export default {
       navIsFixed:false
     }
   },
+  mounted () {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?e6e72860f61b61779ad786450c92d07f";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  },
   computed: {
     hotLabs() {
       return this.$store.state.hotLabs
@@ -40,20 +40,15 @@ export default {
       return this.$store.state.type
     }
   },
-  mounted () {
-    // window.addEventListener('scroll', this.handleScroll)
-  },
-  methods:{
-    // handleScroll () {
-    //   var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-    //   var offsetTop = document.querySelector('#app-wrap').offsetTop
-    //   if (scrollTop > offsetTop) {
-    //     this.navIsFixed = true
-    //   } else {
-    //     this.navIsFixed = false
-    //   }
-    // }
+  watch: {
+    '$route' (to, from) {
+      if (window._hmt) {
+        // console.log(window._hmt)
+        window._hmt.push(['_trackPageview', to.fullPath])
+      }
+    }
   }
+
 }
 </script>
 <style>

@@ -6,7 +6,7 @@
         <div v-for="(item, index) in hotProjectList" :id="item.id" @click="goDetail(item.id)">
 
           <div v-if="index<2" class="_hot">
-            <img :src="item.head" :alt="item.yjh" :title="item.name">
+            <img :src="item.head" :alt="item.yjh || item.name" :title="item.name">
             <div class="number">NO.{{index+1}}</div>
             <div class="title">
               <p>{{item.name}} | {{item.yjh || ''}}</p>
@@ -14,7 +14,7 @@
           </div>
 
           <div class="hot" v-if="index>1 && index<10">
-            <img :src="item.head" :alt="item.yjh" :title="item.name" class="product">
+            <img :src="item.head" :alt="item.yjh || item.name" :title="item.name" class="product">
             <div class="number">{{index+1}}</div>
             <div class="detail">
               <div class="title"><strong>{{item.name}}</strong>&nbsp;<span></span>&nbsp;{{item.yjh || ''}}</div>
