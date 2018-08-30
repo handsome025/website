@@ -48,7 +48,7 @@
 </template>
 
 <script>
-
+import * as api from '../../service/api'
 export default {
   name: 'project-list',
   props:['consultationList'],
@@ -76,7 +76,7 @@ export default {
       let consultationList = this.$store.state.consultationList
       if(consultationInfo.data){
         consultationInfo.data.isFirst = false
-        consultationInfo.data.list = consultationInfo.data.list.concat(this.$store.state.consultationList)
+        consultationInfo.data.list = this.$store.state.consultationList.concat(consultationInfo.data.list)
         this.$store.dispatch('getConsultationList', consultationInfo)
       }
     }

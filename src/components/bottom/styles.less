@@ -5,7 +5,7 @@
   }
 }
 #bottom{
-	height: 305px;
+	min-height: 305px;
 	width: 100%;
 	min-width: 1200px;
 	background: linear-gradient(-135deg, #535962 0%, #272B30 100%);
@@ -19,6 +19,8 @@
 		.bottom-top{
 			color: #ddd;
 			min-height: 185px;
+		    padding-bottom: 10px;
+		    overflow: hidden;
 			font-size: 14px;
 			text-align: left;
 			.top-left{
@@ -34,7 +36,7 @@
 			}
 			.top-right{
 				float: left;
-				width: 400px;
+				width: 270px;
 				label{
 					float: left;
 				    display: inline-block;
@@ -47,6 +49,23 @@
 			h2{
 				font-size: 16px;
 				margin: 33px 0;
+			}
+			.top-link{
+				float: left;
+				width: 310px;
+				a{
+					float: left;
+				    display: inline-block;
+				    /*border: 1px solid #ddd;*/
+				    border-radius: 17px;
+				    padding: 2px 10px;
+				    margin: 0 10px 10px 0;
+				    color: #ddd;
+				    &:hover{
+						color: #fff;
+					}
+				}
+
 			}
 		}
 		.bottom-center{

@@ -96,14 +96,17 @@ function render (req, res) {
   res.setHeader('Server', serverInfo)
 
   const handleError = err => {
-    if (err && err.code === 404) {
-      res.status(404).end('404 | Page Not Found')
-    } else {
-      // Render Error Page or Redirect
-      res.status(500).end('500 | Internal Server Error')
-      console.error(`error during render : ${req.url}`)
-      console.error(err.stack)
-    }
+    // if (err && err.code === 404) {
+    //   res.status(404).end(error) //'404 | Page Not Found'
+    //   // res.writeHead(302,{'Location':"/404.html"});
+    // } else {
+    //   // Render Error Page or Redirect
+    //   res.status(500).end(error) //'500 | Internal Server Error'
+    //   console.error(`error during render : ${req.url}`)
+    //   console.error(err.stack)
+    // }
+    var html = fs.readFileSync(resolve('./404.html'), 'utf-8')
+    res.end(html); 
   }
 
   const cacheable = isCacheable(req)
@@ -200,6 +203,11 @@ app.get('/consultation/pc/search', (req, res) => {
 app.get('/bizEx/pc/addConnection', (req, res) => {
   // console.log(5555,req.query.id)
   axiosEvent('/bizEx/pc/addConnection?bizExId='+req.query.bizExId+'&phone='+req.query.phone, req, res)
+})
+// 友情链接
+app.get('/friendShipLink/pc/list', (req, res) => {
+  // console.log(5555,req.query.id)
+  axiosEvent('/friendShipLink/pc/list', req, res)
 })
 
 

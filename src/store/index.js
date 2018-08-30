@@ -31,7 +31,8 @@ export function createStore () {
       consultationPages:[], //资讯列表侧边栏
       articleInfo:'', // 资讯详情
       bizInfo:'', // 项目详情
-      type:''
+      type:'',
+      friendShipLink:[] //友情链接
     },
     actions: {
       async initList({dispatch, commit}) {
@@ -71,6 +72,8 @@ export function createStore () {
           let consultationList = await api.getConsultationList(data)
           let consultationPages = await api.getConsultationPages(data)
           let setHotProject = await api.getProjectList()
+          let hotLabs = await api.hotLabs()
+          commit('setHotLabs',hotLabs)
           commit('setConsultationList', consultationList)
           commit('setConsultationPages', consultationPages)
           commit('setHotProject',setHotProject)
@@ -110,10 +113,11 @@ export function createStore () {
         let setHotProject = await api.getProjectList()
         let consultation = await api.consultationIndex()
         let hotLabs = await api.hotLabs()
-
+        let friendShipLink = await api.friendShipLink()
         commit('setHotProject',setHotProject)
         commit('setConsultationIndex',consultation)
         commit('setHotLabs',hotLabs)
+        commit('setFriendShipLink',friendShipLink)
       },
       async hotLabsInit({dispatch, commit}, data) {
         let hotLabs = await api.hotLabs()
@@ -165,6 +169,11 @@ export function createStore () {
       setHotLabs(state, list){
         if(list.data){
           state.hotLabs = list.data
+        }
+      },
+      setFriendShipLink(state, list){
+        if(list.data){
+          state.friendShipLink = list.data
         }
       },
       setConsultationList(state, list){

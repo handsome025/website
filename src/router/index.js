@@ -7,6 +7,7 @@ import contact from '@/page/contact'
 import detail from '@/page/detail'
 import article from '@/page/article'
 import biz from '@/page/biz'
+
 Vue.use(Router)
 
 export function createRouter () {

@@ -8,7 +8,7 @@
       </keep-alive>
     </div>
     <!-- 底部bottom -->
-    <bottom :hotLabs='hotLabs'></bottom>
+    <bottom :hotLabs='hotLabs' :friendShipLink="friendShipLink"></bottom>
   </div>
 </template>
 <script>
@@ -38,6 +38,9 @@ export default {
     },
     type() {
       return this.$store.state.type
+    },
+    friendShipLink(){
+     return this.$store.state.friendShipLink
     }
   },
   watch: {

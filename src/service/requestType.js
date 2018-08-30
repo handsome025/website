@@ -51,6 +51,7 @@ export default {
         })
       }).then(res => {
         resolve(res.data)
+        // reject(res)
       })
       .catch(res =>{
         reject(res)
@@ -75,6 +76,7 @@ export default {
         })
       }).then(res => {
         resolve(res.data)
+        // reject(res)
       })
       .catch(res =>{
         reject(res)

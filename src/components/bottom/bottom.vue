@@ -16,8 +16,15 @@
         <div class="top-right">
           <h2>热门标签</h2>
           <div>
-            <label v-for="item in hotLabs" :code='item.code' :title="item.name">{{item.name}}</label>
+            <label v-for="item in hotLabs" :code='item.code' :title="item.value">{{item.value}}</label>
           </div>
+        </div>
+        <div class="top-link">
+          <h2>友情链接</h2>
+          <div>
+            <a v-for="item in friendShipLink" :href="item.url">{{item.name}}</a>
+          </div>
+          <img src="../../assets/404.png" style="display:none;">
         </div>
       </div>
       <div class="bottom-center"></div>
@@ -38,7 +45,7 @@
 let label = ['火锅','奶茶','麻辣烫','小饰品','家具','电器','火锅','奶茶','麻辣烫','小饰品','家具','电器','火锅','奶茶','麻辣烫','小饰品','家具','电器','火锅','奶茶','麻辣烫','小饰品','家具','电器']
 export default {
   name: 'bottom',
-  props:['hotLabs'],
+  props:['hotLabs',"friendShipLink"],
   data () {
     return {
       label: label
