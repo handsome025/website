@@ -44,8 +44,7 @@ export default {
     const keywords = this.$store.state.articleInfo.keyWord || ''
     return {
       title,
-      meta: [{ vmid: 'description', name: 'description', content: description },
-            { vmid: 'keywords', name: 'keywords', content: keywords }]
+      meta: [{ vmid: 'keywords', name: 'keywords', content: keywords },{ vmid: 'description', name: 'description', content: description }]
       }
   },
   computed: {

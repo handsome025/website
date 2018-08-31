@@ -84,8 +84,8 @@ export default {
     const title = '环球加盟'
     return {
         title,
-        meta: [{ vmid: 'description', name: 'description', content: title },
-              { vmid: 'keywords', name: 'keywords', content: title }]
+        meta: [{ vmid: 'keywords', name: 'keywords', content: title },
+        { vmid: 'description', name: 'description', content: title }]
     }
   },
   mounted() {

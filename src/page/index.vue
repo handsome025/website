@@ -75,8 +75,8 @@ export default {
     const title = "环球加盟—真实可靠的创业项目品牌加盟服务!"
     return {
       title,
-      meta: [{ vmid: 'description', name: 'description', content: "环球加盟网，专注于连锁加盟领域的品牌加盟服务，通过招商广告、整合传播、咨询策划、品牌宣传等服务模块，解决信息不对称问题的同时降低企业招商成本，帮助多个品牌与企业实现招商服务，让招商、投资变得简单!" },
-            { vmid: 'keywords', name: 'keywords', content: "环球加盟，品牌加盟，投资创业，连锁加盟创业，加盟连锁网，加盟小吃店，创业项目投资" }]
+      meta: [{ vmid: 'keywords', name: 'keywords', content: "环球加盟，品牌加盟，投资创业，连锁加盟创业，加盟连锁网，加盟小吃店，创业项目投资" },
+      { vmid: 'description', name: 'description', content: "环球加盟网，专注于连锁加盟领域的品牌加盟服务，通过招商广告、整合传播、咨询策划、品牌宣传等服务模块，解决信息不对称问题的同时降低企业招商成本，帮助多个品牌与企业实现招商服务，让招商、投资变得简单!" }]
     }
   },
   computed: {
